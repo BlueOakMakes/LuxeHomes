@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "properties"
+    label: "Properties"
+    folder: "_properties"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Property Name", name: "title", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["residential", "commercial", "villa", "land"]}
+      - {label: "Listing", name: "listing", widget: "select", options: ["sale", "rent"]}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Price per sqft", name: "persqft", widget: "string", required: false}
+      - {label: "Area (sqft)", name: "area", widget: "string", required: false}
+      - {label: "Bedrooms", name: "beds", widget: "string", required: false}
+      - {label: "Bathrooms", name: "baths", widget: "string", required: false}
+      - {label: "Floors", name: "floors", widget: "string", required: false}
+      - {label: "Photo", name: "photo", widget: "image", required: false}
+      - {label: "Description", name: "desc", widget: "text", required: false}
